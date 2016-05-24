@@ -1,0 +1,108 @@
+.logo-company {
+    background-image: url(../img/companylogo_default.png);
+    background-position: right top;
+    background-repeat: no-repeat;
+    margin: 41px 59px 27px 59px;
+    width: 154px;
+    height: 137px;
+}
+
+
+a, a:active, a:focus {
+outline: none;
+}
+
+label {
+    .regular;
+}
+
+
+//////// TAB LEFT ////////////
+
+.tabs-left {
+  border-bottom:none;
+  padding-top:0px;
+  > li {
+    float:none;
+    margin-bottom:0px;
+    margin-right:-1px;
+    > a {
+      border-radius:0;
+      margin-right:0;
+      display:block;
+      padding: 32px;
+      border: 0 none !important;
+      border-left: 4px solid white !important;
+      .semibold;
+      color: black;
+    }
+    > a:hover {
+      background-color:  @gray-ultra-light;
+      border-left: 4px solid @gray-ultra-light !important;
+    }  
+      
+  }
+  > li.active {
+    > a  {
+      background-color:  @gray-ultra-light;
+      border-left: 4px solid @blue !important;
+        color: black;
+    }
+      
+    > a:hover {
+      background-color:  @gray-ultra-light;
+      border-left: 4px solid @blue !important;
+    }
+    
+    > a:focus {
+      background-color:  @gray-ultra-light;        
+      border-left: 4px solid @blue !important;
+    }  
+      
+  }
+}
+
+
+//////////// STEPS ///////////
+
+
+.steps {
+    display: block;
+    margin-left: -28px !important;
+    margin-right: -28px !important;
+    .col-md-4 {
+    padding-left: 8px;
+    padding-right: 8px;
+    }
+    
+    .well {
+    border-radius: 0;
+    background-color: white;
+    border: 0;
+    border-left: 2px solid @green-lemon;
+        
+        .step {
+        color: #B1B2B4;
+        text-transform: uppercase;
+        }
+        
+        .title-step {
+        clear: both;
+        display: block;
+        font-size: 14px;
+        .semibold;    
+        }
+        
+        &.active {
+        background-color: @blue;
+        border-left: 2px solid @blue;            
+            .step {
+            color: #6FCBED;
+            }
+            .title-step {
+            color: white;
+            }
+        }    
+    
+    }
+}

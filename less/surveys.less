@@ -1,0 +1,91 @@
+// Surveys
+
+
+.surveysContainer {
+    .survey {
+        background: @white;
+        cursor: pointer;
+        height: 355px;
+        margin: 0 0 20px;
+        padding: 48px !important;
+        &:nth-child(odd) {
+            background: @white url("../img/bg-survey-odd.png") no-repeat bottom right;
+        }
+        &:nth-child(even) {
+            background: @white url("../img/bg-survey-even.png") no-repeat bottom right;
+        }
+        &:hover {
+            .box-shadow (0 10px 20px 0 rgba(0,0,0,0.1));
+        }
+        &:active:nth-child(odd) {
+            .box-shadow (0 10px 20px 0 rgba(0,0,0,0.1));
+            background: @white-dark url("../img/bg-survey-odd.png") no-repeat bottom right;
+        }
+        &:active:nth-child(even) {
+            .box-shadow (0 10px 20px 0 rgba(0,0,0,0.1));
+            background: @white-dark url("../img/bg-survey-even.png") no-repeat bottom right;
+        }
+        
+        .tagsContainer {
+            margin: 0 0 39px;
+            .tag {
+                .semibold;
+                background: @gray-light;
+                float: left;
+                font-size: 12px;
+                line-height: 10px;
+                margin: 0 7px 0 0;
+                padding: 8px 11px;
+                text-transform: uppercase;
+                &.active {
+                    position: relative;
+                    &:after {
+                        content: "";
+                        width: 0;
+                        height: 0;
+                        border-top: 5px solid @gray-light;
+                        border-left: 9px solid transparent;
+                        position: absolute;
+                        bottom: -5px;
+                        left: 0;
+                    }
+                }
+                &.green {
+                    background: @green-lemon;
+                    color: @white;
+                    &:after {
+                        border-top-color: darken(@green-lemon, 10%);
+                    }
+                }
+                &.blue {
+                    background: @blue;
+                    color: @white;
+                    &:after {
+                        border-top-color: darken(@blue, 10%);
+                    }
+                }
+            }
+        }
+        h2 {
+            .semibold;
+            color: @black;
+            font-size: 32px;
+            letter-spacing: -0.5px;
+            margin: 0 0 0 -2px;
+        }
+        h3 {
+            .light;
+            color: @black;
+            font-size: 32px;
+            margin: 2px 0 0 -2px;
+            letter-spacing: -0.3px;
+        }
+        h4 {
+            .light;
+            color: fade(@black, 40%);
+            font-size: 24px;
+            margin: 5px 0 0 -2px;
+            letter-spacing: -0.1px;
+        }
+    }
+}
