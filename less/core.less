@@ -97,18 +97,108 @@ body {
 
     .well {
         border: 2px solid #DDDDDD;
-        background: none !important;
-        padding: 23px 144px 20px 25px;
-        &.green {
-            background-color: #F9FCF4 !important;
-            border-color: @green-lemon;
+        cursor: pointer;
+        min-height: 108px;
+        padding: 23px 144px 18px 25px;
+        &.even {
+            background: url(../img/bg-well-nav-even.png) no-repeat right bottom;
+            &.green {
+                border-color: @green-lemon;
+                i {
+                    background: url(../img/img-icon-checked-green.png) no-repeat;
+                    display: none;
+                    float: left;
+                    margin-bottom: 30px;
+                    margin-right: 16px;
+                    width: 20px;
+                    height: 16px;
+                }
+                &:hover {
+                    .box-shadow (0 0 7px 0 rgba(134,188,37,0.4));
+                }
+                &:active, &:focus {
+                    background: fade(@green-lemon, 5%) url(../img/bg-well-nav-even.png) no-repeat right bottom !important;
+                    i {
+                        display: block;
+                    }
+                }
+            }
+            &.blue {
+                border-color: @blue;
+                i {
+                    background: url(../img/img-icon-checked-blue.png) no-repeat;
+                    display: none;
+                    float: left;
+                    margin-bottom: 30px;
+                    margin-right: 16px;
+                    width: 20px;
+                    height: 16px;
+                }
+                &:hover {
+                    .box-shadow (0 0 7px 0 rgba(0,163,224,0.4));
+                }
+                &:active, &:focus {
+                    background: fade(@blue, 5%) url(../img/bg-well-nav-even.png) no-repeat right bottom !important;
+                    i {
+                        display: block;
+                    }
+                }
+            }
+        }
+        &.odd {
+            background: url(../img/bg-well-nav-odd.png) no-repeat right bottom;
+            &.green {
+                border-color: @green-lemon;
+                i {
+                    background: url(../img/img-icon-checked-green.png) no-repeat;
+                    display: none;
+                    float: left;
+                    margin-bottom: 30px;
+                    margin-right: 16px;
+                    width: 20px;
+                    height: 16px;
+                }
+                &:hover {
+                    .box-shadow (0 0 7px 0 rgba(134,188,37,0.4));
+                }
+                &:active, &:focus {
+                    background: fade(@green-lemon, 5%) url(../img/bg-well-nav-odd.png) no-repeat right bottom !important;
+                    i {
+                        display: block;
+                    }
+                }
+            }
+            &.blue {
+                border-color: @blue;
+                i {
+                    background: url(../img/img-icon-checked-blue.png) no-repeat;
+                    display: none;
+                    float: left;
+                    margin-bottom: 30px;
+                    margin-right: 16px;
+                    width: 20px;
+                    height: 16px;
+                }
+                &:hover {
+                    .box-shadow (0 0 7px 0 rgba(0,163,224,0.4));
+                }
+                &:active, &:focus {
+                    background: fade(@blue, 5%) url(../img/bg-well-nav-odd.png) no-repeat right bottom !important;
+                    i {
+                        display: block;
+                    }
+                }
+            }
         }
 
         h3 {
+            .semibold;
+            color: @black;
             margin: 0 0 11px 0;
-            font-size: 13px;
+            font-size: 14px;
         }
         p {
+            .regular;
             font-size: 13px;
             margin: 0;
         }
