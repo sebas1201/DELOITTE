@@ -79,7 +79,18 @@ label {
     border-radius: 0;
     background-color: white;
     border: 0;
-    border-left: 2px solid @green-lemon;
+    cursor: pointer;
+        &:hover {
+            background: darken(@white, 5%);
+            i {
+                content: url(../img/navigation_onhover.png);
+            }
+        &.green {
+            border-left: 2px solid @green-lemon;
+        }
+        &.blue {
+            border-left: 2px solid @blue;
+        }
         
         .step {
         color: #B1B2B4;
@@ -92,15 +103,30 @@ label {
         font-size: 14px;
         .semibold;    
         }
+        i {
+            content: url(../img/navigation_default.png);
+            float: right;
+            position: relative;
+            top: -35px;
+        }
         
-        &.active {
-        background-color: @blue;
-        border-left: 2px solid @blue;            
+        &:active, &.active {  
             .step {
-            color: #6FCBED;
+            color: fade(@white, 60%);
             }
             .title-step {
             color: white;
+            }
+            i {
+                content: url(../img/navigation_selected.png);
+            }
+            &.blue {
+                background-color: @blue;
+                border-left: 2px solid @blue; 
+            }
+            &.green {
+                background-color: @green-lemon;
+                border-left: 2px solid @green-lemon; 
             }
         }    
     
