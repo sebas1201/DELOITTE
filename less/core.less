@@ -208,7 +208,51 @@ body {
 .flexBox {
     display: flex;
 }
-    
+
+
+/* Form groups */
+   
+.form-group {
+    input {
+        border: 1px solid @gray-borders;
+        box-shadow: none;
+        color: @black;
+        font-size: 13px;
+        position: relative;
+        &:hover {
+            border-color: @gray-borders-hover;
+        }
+        &:active, &:focus, &.filled {
+            background: url(../img/img-icon-close-input.png) no-repeat 97% 11px;
+            border-color: @blue;
+            box-shadow: none;
+        }
+        &.error, &.required {
+            background: url(../img/img-icon-close-input.png) no-repeat 97% 11px;
+            border-color: @red;
+        }
+    }
+}
+
+
+::-webkit-input-placeholder {
+   color: @gray;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: @gray;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: @gray;  
+}
+
+:-ms-input-placeholder {  
+   color: @gray;  
+}
+
+
+/* Clear Fixed */
 
 .cf:before,
 .cf:after {
