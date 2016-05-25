@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/switchery.css" />
         <link rel="stylesheet" href="css/main.css">
         
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
@@ -51,7 +52,7 @@
                 <div class="container content">
                     <div class="row">
                         <div class="col-md-6 titleContainer noPadding">
-                            <h1>My Surveys</h1>
+                            <h1>Survey Information</h1>
                         </div>
                         <div class="col-md-1 callToHeader noPadding last">
                             <!-- Empty for save button-->
@@ -135,7 +136,8 @@
                                     <hr/>
                                     </div>
                                 
-                                <form role="form">    
+                                <div class="col-md-12">
+                                    <form role="form">    
  
                                         <div class="form-group clearfix">
                                             <label class="control-label col-md-6">Survey Name</label>
@@ -148,10 +150,11 @@
                                             <div class="col-sm-6">
                                                 <div class='input-group date' id='datetimepicker1'>
                                                     <input type='text' class="form-control error" />
-                                                    <span class="input-group-addon">
-                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    <span class="input-group-addon error">
+                                                        <span class="glyphicon"></span>
                                                     </span>
                                                 </div>
+                                                <span class="msgError">Please imput correct text-name</span>
                                             </div>
                                         </div>
                                         <div class="form-group clearfix">
@@ -168,15 +171,17 @@
                                         <div class="form-group clearfix">
                                             <label class="control-label col-md-6" >Show / Hide Deloitte Branding</label>
                                             <div class="col-sm-6">
-                                              
+                                              <input type="checkbox" class="js-switch" checked />
+                                              <label>Show </label>
                                             </div>
                                         </div>
                                         <div class="form-group clearfix">
                                             <label class="control-label col-md-12" >Message to Respondents</label>
-                                            <div class="col-sm-12"><img src="img/wysiwyg.png"> </div>
+                                            <div  style="padding: 20px 0;" class="col-sm-12"><img src="img/wysiwyg.png"> </div>
                                         </div>
 
                                 </form>
+                                </div>
                                 
                                 
                                 <div class="col-md-12">
@@ -208,7 +213,11 @@
 
                 <script src="js/vendor/jquery-1.11.2.min.js"></script>
                 <script src="js/vendor/bootstrap.min.js"></script>
-        
+                <script src="js/switchery.js"></script>
+        <script>
+            var elem = document.querySelector('.js-switch');
+            var init = new Switchery(elem);
+        </script>
         
     </body>
 </html>

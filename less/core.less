@@ -35,7 +35,7 @@
 
 body {
     .regular;
-    //background: @gray-ultra-light url(../img/01-01-01-My-Surveys-05.png) no-repeat top center;
+    //background: @gray-ultra-light url(../img/01-02-00-Survey-Info.png) no-repeat 367px 0;
     .wrapper {
         background: @gray-ultra-light;
         width: 1175px;
@@ -65,12 +65,15 @@ body {
     background-color: white;
     border-right: 1px solid @gray-ultra-light;
     padding: 0;
+    margin-left: 3px;
+    width: 272px;
         .name-company {
         font-size: 16px;
         color: #D0D0CE !important;
         margin: auto 32px;
         text-align: center;
         display: block;
+        line-height: 16px;
         }
 
         .location {
@@ -85,21 +88,32 @@ body {
 
 .panel-right {
     background-color: white;
-
+    padding: 0 24px !important;
+    
     h2 {
-       font-size: 18px;
+        .semibold;
+        font-size: 17px;
         color: #000;
+        margin: 35px 22px 4px -1px;
+        letter-spacing: -0.6px;
     }
 
     p {
         color: #63666A;
+        margin-bottom: 26px;
+    }
+    
+    hr {
+        margin-bottom: 31px;
     }
 
     .well {
         border: 2px solid #DDDDDD;
         cursor: pointer;
+        margin: 0;
         min-height: 108px;
-        padding: 23px 144px 18px 25px;
+        padding: 23px 144px 18px 32px;
+        width: 384px;
         &.even {
             background: url(../img/bg-well-nav-even.png) no-repeat right bottom;
             &.green {
@@ -153,6 +167,7 @@ body {
         }
         &.odd {
             background: url(../img/bg-well-nav-odd.png) no-repeat right bottom;
+            margin: 0 0 0 -10px;
             &.green {
                 border-color: @green-lemon;
                 i {
@@ -207,7 +222,7 @@ body {
         h3 {
             .semibold;
             color: @black;
-            margin: 0 0 11px 0;
+            margin: 0 0 9px 0;
             font-size: 14px;
         }
         p {
@@ -226,25 +241,81 @@ body {
 /* Form groups */
    
 .form-group {
+    margin: 0 0 24px;
+    .control-label {
+        margin: 10px 0 0 -10px;
+    }
+    .form-control {
+        //margin: 11px 0 0;
+    }
     input {
         border: 1px solid @gray-borders;
         box-shadow: none;
         color: @black;
         font-size: 13px;
+        height: 40px;
         position: relative;
         &:hover {
             border-color: @gray-borders-hover;
         }
         &:active, &:focus, &.filled {
-            background: url(../img/img-icon-close-input.png) no-repeat 97% 11px;
+            background: url(../img/img-icon-close-input.png) no-repeat 97% 14px;
             border-color: @blue;
             box-shadow: none;
         }
         &.error, &.required {
-            background: url(../img/img-icon-close-input.png) no-repeat 97% 11px;
+            background: url(../img/img-icon-close-input.png) no-repeat 97% 14px;
             border-color: @red;
+            //border-width: 1px 0 1px 1px;
         }
     }
+    .input-group-addon {
+        background: @white;
+        border-color: @gray-borders;
+        border-width: 1px 1px 1px 0;
+        padding: 5px 8px;
+        &.error, &.required {
+            border-color: @red;
+            color: @red;
+        }
+        span {
+            padding: 3px 4px 5px;
+            &:before {
+                content:url(../img/img-icon-calendar.svg);
+            }
+            &:hover {
+                background: @white-light;
+                border: 1px solid @gray-light;
+                cursor: pointer;
+                .rounded-corners (2px);
+                padding: 2px 3px 3px;
+            }
+            &:active, &:focus {
+                background: darken(@white-light, 5%);   
+                border-color: darken(@gray-light, 5%);  
+            }
+        }
+    }
+    .input-group.date {
+        input {
+            border-width: 1px 0 1px 1px;
+             &.error, &.required {
+                 background: none;
+                border-color: @red !important;
+            }
+            &:active, &:focus {
+                background: none;
+                border-color: @gray-borders;
+            }
+        }
+    } 
+    .msgError {
+        .regular;
+        color: @red;
+        font-size: 13px;
+        margin: 0 0 0 16px;
+    }
+    
 }
 
 
@@ -393,7 +464,7 @@ body {
             font-size: 24px;
             margin: 0;
             padding: 0;
-            margin: 4px -2px;
+            margin: 4px 1px;
         }
     }
     .callToHeader {
