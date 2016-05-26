@@ -231,6 +231,44 @@ body {
             margin: 0;
         }
     }
+    .strongLabel {
+        .semibold;
+    }
+    .surveyAdminContent {
+        .imgProfile {
+            .rounded-corners (3px);
+            float: left;
+            height: 32px;
+            overflow: hidden;
+            width: 32px;
+            margin: 16px 12px 0 0;
+        }
+        .nameProfile {
+            float: left;
+            margin: 14px 20px 0 0;
+            p {
+                .semibold;
+                color: black;
+                font-size: 13px;
+                line-height: 13px;
+                margin: 0;
+            }
+            span {
+                .regular;
+                color: @gray;
+                margin: 0;
+            }
+            
+        }
+    }
+    hr {
+        margin: 15px 0;
+    }
+    a {
+        .regular;
+        color: @green-lemon;
+        font-size: 14px;
+    }
 }
 
 .flexBox {
@@ -244,6 +282,9 @@ body {
     margin: 0 0 24px;
     .control-label {
         margin: 10px 0 0 -10px;
+        span {
+            color: @red;
+        }
     }
     .form-control {
         //margin: 11px 0 0;
