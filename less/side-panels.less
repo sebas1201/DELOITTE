@@ -68,11 +68,11 @@ label {
 
 .steps {
     display: block;
-    margin-left: -28px !important;
-    margin-right: -28px !important;
+    margin: 0 -8px 16px -28px !important;
     .col-md-4 {
     padding-left: 8px;
     padding-right: 8px;
+    min-height: 20px;
     }
     
     .well {
@@ -83,11 +83,14 @@ label {
     margin: 6px 4px 0 4px;
     width: 368px;
     padding: 10px 15px 14px;
+    position: relative;
         
         &:hover {
             background: darken(@white, 5%);
             i {
+                &:before {
                 content: url(../img/navigation_onhover.png);
+                    }
             }
         }
         &.green {
@@ -111,10 +114,12 @@ label {
         .semibold;    
         }
         i {
-            content: url(../img/navigation_default.png);
-            float: right;
-            position: relative;
-            top: -35px;
+            &:before {
+                content: url(../img/navigation_default.png);
+                position: absolute;
+                top: 16px;
+                right: 11px;
+                }
         }
         
         &:active, &.active {  
@@ -125,7 +130,9 @@ label {
             color: white;
             }
             i {
-                content: url(../img/navigation_selected.png);
+                &:before {
+                    content: url(../img/navigation_selected.png);
+                }
             }
             &.blue {
                 background-color: @blue;
@@ -137,5 +144,39 @@ label {
             }
         }  
     
+    }
+}
+
+
+/* Auto Save Button */
+
+.btnAutosave {
+    display: block;
+    margin:2px 0 0 91px;
+    span {
+        .regular;
+        color: @gray-text;
+        font-size: 13px;
+        line-height: 16px;
+        float: right;
+        width: 84%;
+        letter-spacing: -.2px;
+    }
+    i {
+        float: left;
+        margin: 0 0 10px -10px;
+        &:before {
+            content: url(../img/autosave.png);
+        }
+    }
+    &:hover {
+        span {
+            color: darken(@gray-text, 20%);
+        }
+        i {
+            &:before {
+                content: url(../img/autosave_active.png);
+            }
+        }
     }
 }
