@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/switchery.css" />
         <link rel="stylesheet" href="css/main.css">
         
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
@@ -51,10 +52,12 @@
                 <div class="container content">
                     <div class="row">
                         <div class="col-md-6 titleContainer noPadding">
-                            <h1>My Surveys</h1>
+                            <h1>Survey Information</h1>
                         </div>
-                        <div class="col-md-1 callToHeader noPadding last">
-                            <!-- Empty for save button-->
+                        <div class="col-md-3 callToHeader noPadding last">
+                            <a href="#" class="btnAutosave cf">
+                                <i></i> <span>Your Survey was autosaved today at 2:43 PM </span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -66,21 +69,24 @@
 
             <div class="row steps">
                 <div class="col-md-4">
-                    <div class="well">
+                    <div class="well green">
                         <span class="step">Step 1</span>
                         <span class="title-step">Primary Information</span>
+                        <i></i>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="well active">
+                    <div class="well active blue">
                         <span class="step">Step 2</span>
                         <span class="title-step">Client and Project Information</span>
+                        <i></i>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="well">
+                <div class="col-md-4 ">
+                    <div class="well green">
                         <span class="step">Step 3</span>
                         <span class="title-step">Assign taxonomy</span>
+                        <i></i>
                     </div>
                 </div>
             </div>
@@ -105,52 +111,115 @@
                      <!-- Tab panes -->
                         <div class="tab-content">
                             <div class="tab-pane active" id="home">
-                                    <div class="col-md-12">
-                                    <h2>Select Survey Type</h2>
-                                    <p>You can select only one survey at a time</p>
-                                    
-                                    </div>
+                            
+                                <div class="col-md-12">
+                                    <form role="form">
+                                        
 
-                                    <div class="col-md-6">
-                                        <div class="well green">
-                                            <h3>Activity Analysis</h3>
-                                            <p>Employee-level profiling assessment</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="well">
-                                            <h3>Site Profile</h3>
-                                            <p>Process evaluation at a target location</p>
-                                        </div>
-                                    </div>
-                                
-                                    <div class="col-md-12">
-                                    <h2>Survey primary Information</h2>
-                                    <p>Please, fill the fields and select survey type</p>
-                                    <hr/>
-                                    </div>
-                                
-                                <form role="form">    
+                                    <h2>Client Information</h2>                                
+
+                                        
  
                                         <div class="form-group clearfix">
-                                            <label class="control-label col-md-6">Survey Name</label>
+                                            <label class="control-label col-md-6">Client Name <span class="required">*</span></label>
                                             <div class="col-sm-6">
                                               <input type="text" class="form-control" placeholder="Type Here">
                                             </div>
                                         </div>
                                         <div class="form-group clearfix">
-                                            <label class="control-label col-md-6">Survey Launch Date</label>
+                                            <label class="control-label col-md-6">Show / Hide Client name to other Admins</label>
                                             <div class="col-sm-6">
-                                                <div class='input-group date' id='datetimepicker1'>
-                                                    <input type='text' class="form-control" />
-                                                    <span class="input-group-addon">
-                                                        <span class="glyphicon glyphicon-calendar"></span>
-                                                    </span>
-                                                </div>
+                                              <input type="checkbox" class="js-switch" checked />
+                                              <label>Show </label>
                                             </div>
                                         </div>
                                         <div class="form-group clearfix">
-                                            <label class="control-label col-md-6" >Survey Due Date</label>
+                                            <label class="control-label col-md-6">Industry</label>
+                                            <div class="col-sm-6">
+                                                <select class="form-control" id="">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                  </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group clearfix">
+                                            <label class="control-label col-md-6">Country (HQ)</label>
+                                            <div class="col-sm-6">
+                                                <select class="form-control" id="">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                  </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group clearfix">
+                                            <label class="control-label col-md-6">Most Recent Year Revenue in USD Millions</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" placeholder="Type Here">
+                                            </div>
+                                        </div>
+                                        <div class="form-group clearfix">
+                                            <label class="control-label col-md-6">Client Logo</label>
+                                            <div class="col-sm-6">
+                                                <div class="col-sm-8">
+                                                    <input type="text" class="form-control" placeholder="Type Here">
+                                                </div>                                                        
+                                                <button class="col-md-4">Browse</button>
+                                            </div>
+                                        </div>                                          
+                                        
+                                        
+
+                                    <h2>Project Information</h2>                                
+
+                                        
+
+                                        <div class="form-group clearfix">
+                                            <label class="control-label col-md-6">Project Name</label>
+                                            <div class="col-sm-6">
+                                              <input type="text" class="form-control" placeholder="Type Here">
+                                            </div>
+                                        </div>   
+                                        
+                                        <div class="form-group clearfix">
+                                            <label class="control-label col-md-6">Show / Hide Project name to other Admins</label>
+                                            <div class="col-sm-6">
+                                              <input type="checkbox" class="js-switch" checked />
+                                              <label>Show </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group clearfix">
+                                            <label class="control-label col-md-6">Service Line</label>
+                                            <div class="col-sm-6">
+                                                <select class="form-control" id="">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                  </select>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group clearfix">
+                                            <label class="control-label col-md-6">Project Leader</label>
+                                            <div class="col-sm-6">
+                                              <input type="text" class="form-control" placeholder="Type Here">
+                                            </div>
+                                        </div>  
+                                        
+                                        <div class="form-group clearfix">
+                                            <label class="control-label col-md-6">Project Leader Email</label>
+                                            <div class="col-sm-6">
+                                              <input type="text" class="form-control" placeholder="Type Here">
+                                            </div>
+                                        </div>                                          
+                                
+                                        
+                                        <div class="form-group clearfix">
+                                            <label class="control-label col-md-6" >Project Start Date</label>
                                             <div class="col-sm-6">
                                               <div class='input-group date' id='datetimepicker1'>
                                                     <input type='text' class="form-control" />
@@ -160,31 +229,13 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="form-group clearfix">
-                                            <label class="control-label col-md-6" >Show / Hide Deloitte Branding</label>
-                                            <div class="col-sm-6">
-                                              
-                                            </div>
-                                        </div>
-                                        <div class="form-group clearfix">
-                                            <label class="control-label col-md-12" >Message to Respondents</label>
-                                            <div class="col-sm-12"><img src="img/wysiwyg.png"> </div>
-                                        </div>
+
+
 
                                 </form>
-                                
-                                
-                                <div class="col-md-12">
-                                    <h2>Survey Administrator</h2>
-                                    <p>Choose other Survey Administrators if need</p>
-                                    <hr/>
                                 </div>
-                                <div class="form-group clearfix">
-                                    <label class="control-label col-md-6" >Survey Administrators</label>
-                                    <div class="col-sm-6">
-                                        
-                                    </div>
-                                </div>
+                                
+
                                 
                                 
                             </div>
@@ -203,7 +254,11 @@
 
                 <script src="js/vendor/jquery-1.11.2.min.js"></script>
                 <script src="js/vendor/bootstrap.min.js"></script>
-        
+                <script src="js/switchery.js"></script>
+        <script>
+            var elem = document.querySelector('.js-switch');
+            var init = new Switchery(elem);
+        </script>
         
     </body>
 </html>
