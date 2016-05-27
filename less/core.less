@@ -18,7 +18,7 @@
     min-width: 120px;
 }
 .blueText {
-    color: @blue;
+    color: @blue !important;
 }
 
 .narrow {
@@ -137,6 +137,8 @@ body {
         text-align: center;
         display: block;
         line-height: 16px;
+            
+            &.available {color: @black !important;.semibold}
         }
 
         .location {
@@ -146,13 +148,15 @@ body {
         text-align: center;
         margin: 7px 32px 37px 32px;
         display: block;
+            
+            &.available {color: @gray !important;}
         }
 }
 
 .panel-right {
     background-color: white;
     padding: 0 24px !important;
-    
+    width: 920px;
     h2 {
         .semibold;
         font-size: 17px;
@@ -373,6 +377,14 @@ body {
          padding: 17px;
          width: 97%;
          margin: 4px 0 0;
+         .scrollSize {
+             max-height: 285px;
+             overflow-y: scroll;
+             margin-right: -17px;
+             padding-right: 17px;
+             margin-top: -17px;
+             padding-top: 17px;
+         
             ul {
                 margin: 0;
                 padding: 0;
@@ -451,6 +463,7 @@ body {
                     }
                 }
             }
+        }
          .footer {
              background: lighten(@gray-borders, 5%);
              padding: 17px;

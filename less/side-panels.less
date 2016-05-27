@@ -1,7 +1,5 @@
 .logo-company {
-    background-image: url(../img/companylogo_default.png);
-    background-position: right top;
-    background-repeat: no-repeat;
+    text-align: center;
     margin: 37px 63px 27px;
     width: 154px;
     height: 137px;
@@ -63,16 +61,80 @@ label {
 }
 
 
+/////////// Employee Data Files /////////
+.employeeDataFiles {
+    border: 1px solid @gray-borders;
+    
+    padding: 32px;
+    .employeeDataContent {
+        .employeeInfo {
+            float: left;
+            background: url(../img/DataTemplate.png) no-repeat left;
+            padding: 7px 0 7px 80px;
+            h2 {
+                line-height: 26px;
+                margin-top: 0;
+            }
+            span {
+                color: @gray;
+            }
+        }
+        .downloadFile {
+            float: right;
+            margin: 12px 0;
+            width: 144px;
+        }
+    }
+}
+
+.dragDropFiles {
+    border: 1px dashed @gray;
+    padding: 40px 40px 48px;
+    text-align: center;
+    margin-bottom: 46px;
+    &.dragging {
+        background: fade(@blue, 8%);
+    }
+    h3 {
+        .semibold;
+        color: @black;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+}
+.filesContent {
+    border: 1px solid @gray-borders;
+    padding: 25px 17px 24px 80px !important;
+    background: url(../img/bg-customized-files.png) no-repeat 24px 18px;
+    margin-top: 20px;
+    .fileTitle {
+        float: left;
+        h3 {
+            .semibold;
+            color: @black;
+            font-size: 14px;
+            margin-top: 0;
+            line-height: 24px;
+        }
+    }
+}
+
+
 //////////// STEPS ///////////
 
 
 .steps {
     display: flex;
     margin-bottom: 16px !important;
-    .col-md-4 {
-    padding-left: 8px;
-    padding-right: 8px;
-    min-height: 20px;
+    &.onlyTitle {
+        .well {
+            padding: 12px 100px 12px 15px;
+            .title-step {
+                font-size: 12px;
+                line-height: 18px;
+                text-transform: uppercase;
+            }
+        }
     }
     
     .well {
