@@ -9,6 +9,25 @@
     line-height: 1.3333333;
     min-width: 176px;
 }
+.small {
+    .regular;
+    .rounded-corners (3px);
+    padding: 9pxpx;
+    font-size: 13px;
+    line-height: 1.3333333;
+    min-width: 120px;
+}
+.blueText {
+    color: @blue;
+}
+
+.narrow {
+    .regular;
+    .rounded-corners (3px);
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.3333333;
+}
 
 /* Main button color */
 .btn-green {
@@ -30,6 +49,46 @@
         opacity: .50;
     }
 }
+.btn-blue {
+    color: @white;
+    background: @blue;
+    border-color: @blue;
+    &:hover {
+        background: darken(@blue, 2%);
+        border-color: darken(@blue, 2%);
+        color: @white;
+    }
+    &:active, &:visited, &:focus {
+        background: darken(@blue, 4%);
+        border-color: darken(@blue, 4%);
+        color: @white;
+    }
+    &[disabled] {
+        cursor: not-allowed;
+        opacity: .50;
+    }
+}
+
+.btn-border-blue {
+    color: @blue;
+    background: @white;
+    border-color: @blue;
+     &:hover {
+        background: darken(@white, 4%);
+        border-color: @blue;
+        color: @blue;
+    }
+    &:active, &:visited, &:focus {
+        background: darken(@white, 8%);
+        border-color: @blue;
+        color: @blue;
+    }
+    &[disabled] {
+        cursor: not-allowed;
+        opacity: .50;
+    }
+    
+}
 
 // Esential structure
 
@@ -42,7 +101,7 @@ body {
         margin: 0 auto;
         .container {
             width: 1135px;
-            padding-left: 19px;
+            padding-left: 20px;
             padding-right: 20px;
             .row {
                 margin-left: -19px;
@@ -65,7 +124,6 @@ body {
     background-color: white;
     border-right: 1px solid @gray-ultra-light;
     padding: 0;
-    margin-left: 3px;
     width: 272px;
         .name-company {
         font-size: 16px;
@@ -234,6 +292,25 @@ body {
     .strongLabel {
         .semibold;
     }
+    .surveyPeople {
+        .deleteButton {
+            float: right;
+            margin: 20px 0 0;
+            i {
+                &:before {
+                    content: url(../img/close_default.png);
+                }
+                &:hover {
+                    &:before {
+                        content: url(../img/close_onhover.png);
+                    }
+                }
+            }
+        }
+        hr {
+            margin: 15px 0 0;
+        }
+    }
     .surveyAdminContent {
         .imgProfile {
             .rounded-corners (3px);
@@ -245,7 +322,7 @@ body {
         }
         .nameProfile {
             float: left;
-            margin: 14px 20px 0 0;
+            margin: 16px 20px 0 0;
             p {
                 .semibold;
                 color: black;
@@ -286,6 +363,95 @@ body {
             color: @red;
         }
     }
+     .showInfo {
+         border: 1px solid @gray-borders;
+         padding: 17px;
+         width: 97%;
+         margin: 4px 0 0;
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                li {
+                    margin: 0 0 16px;
+                    &:before, &:after {
+                        display: table;
+                        clear: both;
+                        content: "";
+                    }
+                    .imgProfile {
+                        .rounded-corners (3px);
+                        float: left;
+                        height: 32px;
+                        overflow: hidden;
+                        width: 32px;
+                        margin: 0 12px 0 0;
+                    }
+                    .nameProfile {
+                        float: left;
+                        margin-top: 3px;
+                        p {
+                            .semibold;
+                            color: @black;
+                            font-size: 13px;
+                        }
+                        span {
+                            .regular;
+                            color: @gray;
+                            display: block;
+                            font-size: 13px;
+                        }
+                    }
+                    .checkProfile {
+                        float: right;
+                        margin: 4px 0px;
+                        input[type=checkbox].css-checkbox {
+							position:absolute; 
+                            z-index:-1000; 
+                            left:-1000px; 
+                            overflow: hidden; 
+                            clip: rect(0 0 0 0);
+                            height:1px; 
+                            width:1px; 
+                            margin:-1px; 
+                            padding:0; 
+                            border:0;
+						}
+
+						input[type=checkbox].css-checkbox + label.css-label {
+							padding-left:23px;
+							height:18px; 
+							display:inline-block;
+							line-height:18px;
+							background-repeat:no-repeat;
+							background-position: 0 0;
+							font-size:18px;
+							vertical-align:middle;
+							cursor:pointer;
+
+						}
+
+						input[type=checkbox].css-checkbox:checked + label.css-label {
+							background-position: 0 -18px;
+						}
+						label.css-label {
+                            background-image:url(../img/sprite-checkbox.png);
+                            -webkit-touch-callout: none;
+                            -webkit-user-select: none;
+                            -khtml-user-select: none;
+                            -moz-user-select: none;
+                            -ms-user-select: none;
+                            user-select: none;
+                        }
+                    }
+                }
+            }
+         .footer {
+             background: lighten(@gray-borders, 5%);
+             padding: 17px;
+             margin: 0 -17px -17px;
+         }
+        }
     .form-control {
         //margin: 11px 0 0;
     }
@@ -304,8 +470,19 @@ body {
             border-color: @blue;
             box-shadow: none;
         }
+        &.searchField {
+            background: url(../img/search_default.png) no-repeat 97% 11px;
+            width: 97% ;
+            margin-right: 3%;
+            &:active, &:focus, &.filled {
+                background: url(../img/search_focused.png) no-repeat 97% 11px; 
+            }
+            &.error, &.required {
+                background: url(../img/search_error.png) no-repeat 97% 11px; 
+            }
+        }
         &.error, &.required {
-            background: url(../img/img-icon-close-input.png) no-repeat 97% 14px;
+            background: url(../img/img-icon-close-input.png) no-repeat 97% 11px;
             border-color: @red;
             //border-width: 1px 0 1px 1px;
         }
