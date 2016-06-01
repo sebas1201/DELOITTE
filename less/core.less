@@ -355,6 +355,10 @@ body {
         color: @green-lemon;
         font-size: 14px;
     }
+    
+    a.btn-green {
+        color: white;
+    }
 }
 
 .flexBox {
@@ -623,6 +627,13 @@ body {
                     }
                 }
             }
+            i{
+                background: url(../img/logo-Dprofile.png) no-repeat;
+                float: left;
+                width: 100px;
+                height: 20px;
+                margin-top: 23px;
+            }
         }
     }
     
@@ -710,5 +721,58 @@ body {
             margin: 0 0 0 2px;
             min-width: 176px;
         }
+    }
+}
+
+.dragover {
+    background-color: #EBF8FD;
+}
+
+.progress-green{
+    padding-left: 0 !important;
+    div:nth-child(1) {
+        display: inline-block;
+        div {
+            width: 150px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-weight: bold;
+        }
+        span {
+            color: @gray;
+            padding-left: 45px;
+            position: relative;
+            top: -5px;
+        }
+        .delete-progress {
+            float: right;
+            text-align: right;
+            width: 130px;
+            i {
+                &:before {
+                    content: url(../img/close_default.png);
+                }
+                &:hover {
+                    &:before {
+                        content: url(../img/close_onhover.png);
+                    }
+                }
+            }
+        } 
+    }    
+    .progress {
+        height: 6px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        background: @gray-background;        
+        margin: 4px 0 12px 0 -6px;
+    }   
+    span:nth-child(3){
+        color: @gray;
+    }
+    span:nth-child(4){
+        color: @gray;
+        padding-left: 45px;
     }
 }
