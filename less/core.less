@@ -635,6 +635,9 @@ body {
                 margin-top: 23px;
             }
         }
+        .logo-2{
+            display: none;
+        }        
     }
     
     // Nav Top Style
@@ -693,6 +696,66 @@ body {
                 font-size: 14px;
             }
         }
+    }
+    
+    &.header-white {
+        background: @white;
+        .wrapper {    
+            .logo {
+                i {
+                    background: url(../img/bg-customized-files.png) no-repeat;
+                    float: left;
+                    width: 45px;
+                    height: 43px;
+                    margin-top: 10px;
+                }
+            }
+        }
+        .navTop {
+            ul {
+                li {
+                    a {
+                        color: fade(@black,50%);
+                        &:hover {
+                            color: @black;
+                        }
+                    }
+                    &.active {
+                        color: @black;
+                    }
+                }
+            }
+        }
+        .userProfile {
+            display: none;
+        }        
+    }
+    &.header-black {
+        //background: @black;
+        .wrapper {    
+            .logo {
+                i {
+                    background: url(../img/bg-customized-files.png) no-repeat;
+                    float: left;
+                    width: 45px;
+                    height: 43px;
+                    margin-top: 10px;
+                }
+            }
+            .logo-2 {
+                display: inline-block;
+                i {
+                    background: url(../img/bg-customized-files.png) no-repeat;
+                    float: right;
+                    width: 45px;
+                    height: 43px;
+                    margin-top: 10px;                    
+                }
+            }            
+        }
+        .userProfile {
+            display: none;
+        }        
     }
     
 }
@@ -797,5 +860,45 @@ body {
     i {
         margin: 0 8px;
         cursor: pointer;
+    }
+}
+
+.modal-content {
+    width: 435px;
+    margin: auto;
+    .rounded-corners (0);
+    .modal-body {
+        height: 395px;
+        .conten-body{
+            margin-top: 65px;
+            img {
+                height: 130px;
+            }
+            h4 {            
+                font-weight: bold;                
+                line-height: inherit;
+                color: @black;
+                &:nth-child(2) {
+                    margin: 40px 0 0;
+                }
+                &:nth-child(3) {
+                    margin: 0 0 20px;
+                }                
+            }
+        }
+    }
+    .modal-footer {
+        button {
+            padding: 10px 0;
+            width: 177px;
+            margin: 16px 0;
+            &.btn-default {
+                margin-left: 16px;
+            }
+            &.btn-green {
+                margin-right: 16px;
+                margin-bottom: 16px;
+            }
+        }
     }
 }
