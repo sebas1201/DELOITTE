@@ -902,3 +902,162 @@ body {
         }
     }
 }
+
+/////////////////// CCMM //////////////////////////
+
+.employee-list{
+    background-color: @white;
+    padding: 0 32px;
+    .text-header{        
+        padding-left: 2px !important;
+        h1{            
+            font-size: 24px;
+            .regular;            
+        }
+        p{
+            font-size: 14px;
+            color: @gray-text;
+            max-width: 480px;
+            margin-bottom: 30px;
+        }
+    }
+    
+    .btn-border-green{
+        margin: 54px 32px 32px 0;
+    }
+    
+    
+    .table{
+        margin: 0;
+        width: 1071px;
+        border: 1px solid @gray-light;
+        font-size: 13px;
+        
+        thead{
+            background: @gray-ultra-light;
+            border: none;
+            th{
+                text-align: left;
+                vertical-align: top;
+                padding-top: 16px;
+                padding-bottom: 12px;
+                border: none;
+                &:first-child{
+                    padding-left: 21px;
+                }
+                &:last-child{
+                    text-align: center;
+                    width: 110px;
+                }
+            }
+        }
+        
+        tbody{
+            tr{
+                border-bottom: 1px solid @gray-light;
+                td{
+                    border: none;
+                    padding-top: 12px;
+                    padding-bottom: 13px;
+                    &:first-child{
+                        padding-left: 21px;
+                    }                    
+                }
+                .disable{
+                    color: @gray;
+                }
+            }
+        }
+        
+        .action{
+            padding: 0;
+            border-left: 1px solid @gray-light;
+            width: 120px;
+            padding-left: 14px;
+            
+            img{                
+                cursor: pointer;
+                width: 24px;
+                margin: 16px 3px 15px 0;
+                padding: 5px;
+                
+                &:first-child{
+                    content: url(../img/Edit_default.png);    
+                    
+                    &:hover{
+                         content: url(../img/Edit_onhover.png);
+                    }
+                }
+                &:nth-child(2){
+                    content: url(../img/Exclude_default.png);    
+                    
+                    &:hover{
+                         content: url(../img/Exclude_onhover.png);
+                    }
+                }
+                &:last-child{
+                    margin-right: 18px;
+                    content: url(../img/Comment.png);    
+
+                    &:hover{
+                         content: url(../img/Comment_onhover.png);
+                    }
+                }
+            }
+        }
+    }
+    
+    .btn{
+        width: 160px;
+        margin: 25px 0 25px 16px;
+    }
+
+}
+
+.pagination{  
+    margin: 25px 0;
+    li{        
+        .active, &:hover{
+            background-color:@gray-borders;            
+        }
+        
+        .show-more{
+            color:  @gray-show-more;
+        }
+     
+        a{        
+        width: 40px; 
+        height: 40px;
+        padding: 12px 0;
+        font-size: 14px;
+        text-align: center;
+        line-height: 14px;
+        color:  @black;
+        cursor: pointer;
+        .semibold;
+        
+        &:hover{
+            color: @black;
+            background-color:@gray-borders;            
+        }
+    }
+    }
+}
+
+
+.btn-border-green{    
+    background-color: @white;
+    border-color: @green-lemon;
+    color: @green-lemon;
+    padding: 13px 20px 11px 20px;
+    line-height: 16px;
+    
+    &:hover{
+        color: @green-lemon;
+        background-color: @green-paneles;
+    }
+    img{
+        height: 16px;
+        margin-right: 9px;
+    }
+}
