@@ -104,18 +104,67 @@ label {
 }
 .filesContent {
     border: 1px solid @gray-borders;
-    padding: 25px 17px 24px 80px !important;
+    padding: 22px 17px 22px 80px !important;
     background: url(../img/bg-customized-files.png) no-repeat 24px 18px;
     margin-top: 20px;
+    display: inline-flex;
+    width: 47%;
+    margin-right: 3%;
     .fileTitle {
         float: left;
+        min-width: 190px;
+        max-width: 190px;
         h3 {
             .semibold;
             color: @black;
             font-size: 14px;
             margin-top: 0;
-            line-height: 24px;
+            margin-bottom: 0px;
+            line-height: 20px;
+            word-break: break-word;
         }
+    }
+    &.respondents {
+        background: url(../img/customizad_taxonomy.png) no-repeat 24px 18px;
+        background-color: @green-paneles;
+        border: 1px solid @green-lemon;
+    }
+    &.active {
+        background-color: @green-paneles!important;
+        border: 1px solid @green-lemon;
+    }
+    &.finance {
+        background: url(../img/img-finance.png) no-repeat 24px 18px;
+    }
+    &.it {
+        background: url(../img/img-it.png) no-repeat 24px 18px;
+    }
+    &.marketing {
+        background: url(../img/img-marketing.png) no-repeat 24px 18px;
+    }
+    &.corporate-services {
+        background: url(../img/img-corporate-services.png) no-repeat 24px 18px;        
+    }
+    &.hr {
+        background: url(../img/img-hr.png) no-repeat 24px 18px;        
+    }
+    &.sales {
+        background: url(../img/img-sales.png) no-repeat 24px 18px;        
+    }
+    &.legal {
+        background: url(../img/img-legal.png) no-repeat 24px 18px;        
+    }    
+    &.indirect-materials {
+        background: url(../img/img-indirect-materials.png) no-repeat 24px 18px;        
+    }  
+    &.img-corporate-re {
+        background: url(../img/img-corporate-re.png) no-repeat 24px 18px; 
+    }
+    &.img-supply-chain {
+        background: url(../img/img-supply-chain.png) no-repeat 24px 18px; 
+    }
+    &:hover {
+        border: 1px solid @blue;
     }
 }
 
@@ -138,14 +187,14 @@ label {
     }
     
     .well {
-    border-radius: 0;
-    background-color: white;
-    border: 0;
-    cursor: pointer;
-    margin: 6px 4px 0 4px;
-    width: 560px;
-    padding: 10px 15px 14px;
-    position: relative;
+        border-radius: 0;
+        background-color: white;
+        border: 0;
+        cursor: pointer;
+        margin: 6px 4px 0 4px;
+        width: 560px;
+        padding: 10px 15px 14px;
+        position: relative;
         
         &:first-child {
             margin-left: 0;
@@ -158,8 +207,8 @@ label {
             background: darken(@white, 5%);
             i {
                 &:before {
-                content: url(../img/navigation_onhover.png);
-                    }
+                    content: url(../img/navigation_onhover.png);
+                }
             }
         }
         &.green {
@@ -170,17 +219,18 @@ label {
         
         }
         .step {
-        color: #B1B2B4;
-        text-transform: uppercase;
-        letter-spacing: -1.4px;
+            color: #B1B2B4;
+            text-transform: uppercase;
+            letter-spacing: -1.4px;
+            display: block;
         }
         
         .title-step {
-        clear: both;
-        display: block;
-        font-size: 14px;
-        letter-spacing: -0.1px;
-        .semibold;    
+            clear: both;
+            display: block;
+            font-size: 14px;
+            letter-spacing: -0.1px;
+            .semibold;    
         }
         i {
             &:before {
@@ -188,7 +238,7 @@ label {
                 position: absolute;
                 top: 16px;
                 right: 11px;
-                }
+            }
         }
         
         &:active, &.active {  
@@ -212,7 +262,13 @@ label {
                 border-left: 2px solid @green-lemon; 
             }
         }  
-    
+        &.step-before {
+            i {
+                &:before {
+                    content: url(../img/navigation_completed.png);
+                }
+            }
+        }
     }
 }
 
@@ -245,6 +301,13 @@ label {
         i {
             &:before {
                 content: url(../img/autosave_active.png);
+            }
+        }
+    }
+    &.autosave-error {
+        i {
+            &:before {
+                content: url(../img/autosave_error.png);
             }
         }
     }

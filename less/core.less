@@ -120,7 +120,6 @@ body {
                     }
                 }
             }
-            
         }
     }
 }
@@ -369,7 +368,7 @@ body {
 /* Form groups */
    
 .form-group {
-    margin: 0 0 24px;
+    margin: 0 0 24px 8px;
     .control-label {
         margin: 10px 0 0 -10px;
         span {
@@ -555,9 +554,23 @@ body {
         font-size: 13px;
         margin: 0 0 0 16px;
     }
-    
+    &.review-survey {
+        margin: 8px 0 36px 8px;
+        .control-label {
+            margin-top: 0;
+            font-weight: bold;
+            color: black;
+        }
+        p {
+            margin-bottom: 0;
+        }
+    }
 }
-
+.form-survey-information{
+    hr {
+        margin-bottom: 44px;
+    }
+}
 
 ::-webkit-input-placeholder {
    color: @gray;
@@ -627,8 +640,8 @@ body {
                     }
                 }
             }
-            i{
-                background: url(../img/logo-Dprofile.png) no-repeat;
+            i, img{
+                /*background: url(../img/logo-Dprofile.png) no-repeat;*/
                 float: left;
                 width: 100px;
                 height: 20px;
@@ -637,7 +650,7 @@ body {
         }
         .logo-2{
             display: none;
-        }        
+        }   
     }
     
     // Nav Top Style
@@ -702,8 +715,8 @@ body {
         background: @white;
         .wrapper {    
             .logo {
-                i {
-                    background: url(../img/bg-customized-files.png) no-repeat;
+                i,img {
+                    /*background: url(../img/bg-customized-files.png) no-repeat;*/
                     float: left;
                     width: 45px;
                     height: 43px;
@@ -721,7 +734,9 @@ body {
                         }
                     }
                     &.active {
-                        color: @black;
+                        a {
+                            color: @black;
+                        }
                     }
                 }
             }
@@ -731,25 +746,23 @@ body {
         }        
     }
     &.header-black {
-        //background: @black;
         .wrapper {    
             .logo {
-                i {
-                    background: url(../img/bg-customized-files.png) no-repeat;
+                i, img {
+                    //background: url(../img/bg-customized-files.png) no-repeat;
                     float: left;
-                    width: 45px;
-                    height: 43px;
-                    margin-top: 10px;
+                    width: 100px;
+                    height: 20px;
+                    margin-top: 23px;
                 }
             }
             .logo-2 {
                 display: inline-block;
-                i {
-                    background: url(../img/bg-customized-files.png) no-repeat;
+                i, img {
                     float: right;
-                    width: 45px;
-                    height: 43px;
-                    margin-top: 10px;                    
+                    width: 100px;
+                    height: 20px;
+                    margin-top: 23px;                 
                 }
             }            
         }
@@ -842,14 +855,40 @@ body {
 
 .icon-progress {
     float: right;
+    margin-top: 3px;
+    margin-left: 7px;
+    i {
+        margin-left: 10px;
+        cursor: pointer;
+    }
     .icon-download {
         &:before {
             content: url(../img/download.png);
+        }
+        &:hover {
+            &:before {
+                content: url(../img/download_onhover.png)!important; 
+            }
+        }
+        &.active, &:active, &:focus, &.filled {
+            &:before {
+                content: url(../img/download_onclick.png)!important; 
+            }
         }
     }
     .arrow-right {
         &:before {
             content: url(../img/arrow-right.png);
+        }
+        &:hover {
+            &:before {
+                content: url(../img/continue_onhover.png)!important;
+            } 
+        }
+        &.active, &:active, &:focus, &.filled {
+            &:before {
+                content: url(../img/continue_onclick.png)!important; 
+            }
         }
     }
     .icon-close {
@@ -857,51 +896,179 @@ body {
             content: url(../img/close.png);
         }
     }  
-    i {
-        margin: 0 8px;
-        cursor: pointer;
+    &.position-close {
+        padding: 11px 15px 0 0;
     }
 }
 
-.modal-content {
-    width: 435px;
-    margin: auto;
-    .rounded-corners (0);
-    .modal-body {
-        height: 395px;
-        .conten-body{
-            margin-top: 65px;
-            img {
-                height: 130px;
-            }
-            h4 {            
-                font-weight: bold;                
-                line-height: inherit;
-                color: @black;
-                &:nth-child(2) {
-                    margin: 40px 0 0;
+.title-content {
+    background: @white;
+    border-bottom: 1px solid @gray-ultra-light;
+    h1 {
+        font-size: 16px;
+        text-transform: uppercase;        
+        padding: 8px 20px 18px;
+        font-weight: bold;
+        color: @black;
+    }
+}
+
+.modal-dialog {
+    margin: 180px auto;
+    .modal-content {
+        width: 464px;
+        margin: auto;
+        .rounded-corners (0);
+        .modal-body {
+            height: 417px;
+            .conten-body{            
+                img {
+                    margin-top: 65px;
                 }
-                &:nth-child(3) {
-                    margin: 0 0 20px;
-                }                
+                h4 {            
+                    font-weight: bold;                
+                    line-height: inherit;
+                    color: @black;
+                    &:nth-child(2) {
+                        margin: 40px 20px 0;
+                    }
+                    &:nth-child(3) {
+                        margin: 0 0 20px;
+                    }                
+                }
             }
         }
-    }
-    .modal-footer {
-        button {
-            padding: 10px 0;
-            width: 177px;
-            margin: 16px 0;
-            &.btn-default {
-                margin-left: 16px;
+        .modal-footer {
+            background: @gray-ultra-light;
+            border: none;
+            button {
+                padding: 10px 0;
+                width: 177px;
+                margin: 16px 0;
+                &.btn-default {
+                    margin-left: 16px;
+                }
+                &.btn-green {
+                    margin-right: 16px;
+                    margin-bottom: 16px;
+                }
             }
-            &.btn-green {
-                margin-right: 16px;
-                margin-bottom: 16px;
+        }
+        &.modal-review-survey {
+            margin: auto;
+            .modal-header {
+                h4 {
+                    color: black;
+                    line-height: 34px;
+                    padding: 7px 0 7px 16px;
+                    font-weight: bold;
+                }
+                .icon-progress {
+                    padding-top: 14px;
+                }
+            }
+            .modal-body {
+                height: auto;
+                padding: 0 32px 40px 32px;
+                .form-group {
+                    margin: inherit;
+                    label {
+                        font-size: 16px;
+                        padding-left: 1px;
+                        font-weight: bold;
+                        color: black;
+                        margin-bottom: 9px;
+                        margin-top: 22px;
+                    }
+                    .searchField {
+                        padding: 13px 14px 12px;
+                        font-size: 14px;
+                    }
+                    .link-form {
+                        display: block;
+                        margin-left: 1px;
+                        color: @blue;
+                        width: 95%;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                }
+            }
+            .modal-footer {
+                padding: 18px 0 22px 31px;
+                .btn-green {
+                    line-height: 18px;
+                    float: left;
+                    margin: 0;
+                    &.inactive {
+                        opacity: 0.5;
+                    }
+                }
             }
         }
     }
 }
+.textarea-form {
+    padding-left: 0!important;
+    margin-top: 10px;
+    .cke_chrome{
+        border: 1px solid @gray-borders;
+        .cke_top {
+            background: @gray-ultra-light;
+            border-bottom: 1px solid @gray-borders;
+            .cke_toolbar {
+                .cke_toolgroup {
+                    background: @white;
+                    border: 1px solid @gray-borders;
+                    .cke_button {
+                        border: 1px solid @gray-borders;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Authentication and authorization
+
+.authentication {
+    background-color: @white;
+    text-align: center;
+    h3 {
+        font-size: 31px;
+        line-height: 34px;
+        color: @black;
+        margin-top: 8px;
+        margin-bottom: 4px;
+    }
+    .text-help {
+        width: 260px;
+        display: inline-block;
+        span {
+            font-size: 14px;
+            color: @gray;   
+            line-height: 20px;
+            a {
+                color: @blue;
+            }
+        }
+    }
+    .access-denied {
+        padding-top: 269px;
+        padding-bottom: 241px;
+        margin-top: 20px;
+    }
+    .no-survey {
+        padding-top: 214px;
+        padding-bottom: 216px;
+        h3 {
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+    }
+}
+
 
 /////////////////// CCMM //////////////////////////
 
@@ -1021,7 +1188,7 @@ body {
             background-color:@gray-borders;            
         }
         
-        .show-more{
+        .show-more {
             color:  @gray-show-more;
         }
      
