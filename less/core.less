@@ -1039,14 +1039,14 @@ body {
                 &:first-child{
                     content: url(../img/Edit_default.png);    
                     
-                    &:hover{
+                    &:hover, &.active{
                          content: url(../img/Edit_onhover.png);
                     }
                 }
                 &:nth-child(2){
                     content: url(../img/Exclude_default.png);    
                     
-                    &:hover{
+                    &:hover, &.active{
                          content: url(../img/Exclude_onhover.png);
                     }
                 }
@@ -1054,7 +1054,7 @@ body {
                     margin-right: 18px;
                     content: url(../img/Comment.png);    
 
-                    &:hover{
+                    &:hover, &.active{
                          content: url(../img/Comment_onhover.png);
                     }
                 }
@@ -1118,7 +1118,6 @@ body {
 }
 
 
-
 .loading {
   position: fixed;
   z-index: 999;
@@ -1147,5 +1146,5 @@ body {
     height: 100%;
     background: @black;
     opacity: 0.7;
-}
+}  
 

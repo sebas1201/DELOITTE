@@ -13,7 +13,6 @@
         
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
 
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
       <!--  <div class="loading">
@@ -95,7 +94,6 @@
                         Add Employee
                     </button>
                 </div>
-
                 <div class="col-md-12 noPadding">
                     <table class="table">
                         <thead>
@@ -119,8 +117,8 @@
                                 <td>Sacramento CA, USA</td>
                                 <td>Exempt</td>
                                 <td>40</td>
-                                <td class="action text-right">
-                                    <img>
+                                <td class="action text-right">                                      
+                                    <img data-toggle="tooltip" title="Edit">
                                     <img>
                                     <img>
                                 </td>                                
@@ -284,9 +282,14 @@
                 <script src="js/vendor/jquery-1.11.2.min.js"></script>
                 <script src="js/vendor/bootstrap.min.js"></script>
                 <script src="js/switchery.js"></script>
+        
         <script>
             var elem = document.querySelector('.js-switch');
             var init = new Switchery(elem);
+            
+            $(document).ready(function(){
+                $('[data-toggle="tooltip"]').tooltip(); 
+            });
         </script>
         
     </body>
