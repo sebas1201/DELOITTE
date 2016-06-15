@@ -1094,98 +1094,113 @@ body .wrapper .container .row .col-lg-12.noPadding input {
   margin-top: 25px;
   margin-bottom: 12px;
 }
-.employee-list {
-  background-color: #ffffff;
-  padding: 0 32px;
-}
-.employee-list .text-header {
+.text-header {
   padding-left: 2px !important;
 }
-.employee-list .text-header h1 {
+.text-header h1 {
   font-size: 24px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-.employee-list .text-header p {
+.text-header p {
   font-size: 14px;
   color: #63666a;
   max-width: 480px;
   margin-bottom: 30px;
 }
+.employee-list {
+  background-color: #ffffff;
+  padding: 0 32px;
+}
 .employee-list .btn-border-green {
   margin: 54px 32px 32px 0;
 }
-.employee-list .table {
+.employee-list .employee-data {
   margin: 0;
   width: 1071px;
   border: 1px solid #e7e7e6;
   font-size: 13px;
 }
-.employee-list .table thead {
+.employee-list .employee-data thead {
   background: #f7f7f7;
   border: none;
 }
-.employee-list .table thead th {
+.employee-list .employee-data thead th {
   text-align: left;
   vertical-align: top;
   padding-top: 16px;
   padding-bottom: 12px;
   border: none;
 }
-.employee-list .table thead th:first-child {
+.employee-list .employee-data thead th:first-child {
   padding-left: 21px;
 }
-.employee-list .table thead th:last-child {
+.employee-list .employee-data thead th:last-child {
   text-align: center;
   width: 110px;
 }
-.employee-list .table tbody tr {
+.employee-list .employee-data tbody tr {
   border-bottom: 1px solid #e7e7e6;
 }
-.employee-list .table tbody tr td {
+.employee-list .employee-data tbody tr td {
   border: none;
   padding-top: 12px;
   padding-bottom: 13px;
+  position: relative;
 }
-.employee-list .table tbody tr td:first-child {
+.employee-list .employee-data tbody tr td:first-child {
   padding-left: 21px;
 }
-.employee-list .table tbody tr .disable {
+.employee-list .employee-data tbody tr td .added {
+  position: absolute;
+  left: -37px;
+  top: 20px;
+  background: #86bc25;
+  transform: rotateZ(-90deg);
+  padding: 1px 9px 2px 9px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 11px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.employee-list .employee-data tbody tr .disable {
   color: #97999b;
 }
-.employee-list .table .action {
+.employee-list .employee-data .action {
   padding: 0;
   border-left: 1px solid #e7e7e6;
   width: 120px;
   padding-left: 14px;
 }
-.employee-list .table .action img {
+.employee-list .employee-data .action img {
   cursor: pointer;
   width: 24px;
   margin: 16px 3px 15px 0;
   padding: 5px;
 }
-.employee-list .table .action img:first-child {
+.employee-list .employee-data .action img:first-child {
   content: url(../img/Edit_default.png);
 }
-.employee-list .table .action img:first-child:hover,
-.employee-list .table .action img:first-child.active {
+.employee-list .employee-data .action img:first-child:hover,
+.employee-list .employee-data .action img:first-child.active {
   content: url(../img/Edit_onhover.png);
 }
-.employee-list .table .action img:nth-child(2) {
+.employee-list .employee-data .action img:nth-child(2) {
   content: url(../img/Exclude_default.png);
 }
-.employee-list .table .action img:nth-child(2):hover,
-.employee-list .table .action img:nth-child(2).active {
+.employee-list .employee-data .action img:nth-child(2):hover,
+.employee-list .employee-data .action img:nth-child(2).active {
   content: url(../img/Exclude_onhover.png);
 }
-.employee-list .table .action img:last-child {
+.employee-list .employee-data .action img:last-child {
   margin-right: 18px;
   content: url(../img/Comment.png);
 }
-.employee-list .table .action img:last-child:hover,
-.employee-list .table .action img:last-child.active {
+.employee-list .employee-data .action img:last-child:hover,
+.employee-list .employee-data .action img:last-child.active {
   content: url(../img/Comment_onhover.png);
 }
 .employee-list .btn {
@@ -1259,6 +1274,49 @@ body .wrapper .container .row .col-lg-12.noPadding input {
   height: 100%;
   background: #000000;
   opacity: 0.7;
+}
+.edit-add-employee {
+  width: 688px;
+}
+.edit-add-employee .modal-header h4 {
+  margin: 14px 0 13px 2px;
+}
+.edit-add-employee .modal-header img {
+  content: url(../img/close_default.png);
+  margin-top: 11px;
+  cursor: pointer;
+}
+.edit-add-employee .modal-header img:hover {
+  content: url(../img/close_onhover.png);
+}
+.edit-add-employee .modal-body {
+  height: inherit !important;
+}
+.edit-add-employee .modal-body .form-group {
+  margin: 16px 2px 0 2px;
+}
+.edit-add-employee .modal-body .form-group label {
+  margin: 0 0 10px 0;
+}
+.edit-add-employee .modal-body .form-group input,
+.edit-add-employee .modal-body .form-group select {
+  height: 40px;
+  padding-left: 15px;
+  margin-bottom: 24px;
+}
+.edit-add-employee .modal-body .form-group textarea {
+  height: 106px;
+  margin-bottom: 14px;
+}
+.edit-add-employee .modal-body .form-group textarea:active,
+.edit-add-employee .modal-body .form-group textarea:focus,
+.edit-add-employee .modal-body .form-group textarea.filled {
+  background: url(../img/img-icon-close-input.png) no-repeat 97% 14px;
+  border-color: #00a3e0;
+  box-shadow: none;
+}
+.edit-add-employee .modal-footer button {
+  margin: 3px 0 7px 16px;
 }
 .semibold {
   font-family: 'Open Sans', sans-serif;

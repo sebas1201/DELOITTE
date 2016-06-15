@@ -960,29 +960,31 @@ body {
 
 
 /////////////////// CCMM //////////////////////////
+
+.text-header{        
+    padding-left: 2px !important;
+    h1{            
+        font-size: 24px;
+        .regular;            
+    }
+    p{
+        font-size: 14px;
+        color: @gray-text;
+        max-width: 480px;
+        margin-bottom: 30px;
+    }
+}
+    
 .employee-list{
     background-color: @white;
     padding: 0 32px;
-    .text-header{        
-        padding-left: 2px !important;
-        h1{            
-            font-size: 24px;
-            .regular;            
-        }
-        p{
-            font-size: 14px;
-            color: @gray-text;
-            max-width: 480px;
-            margin-bottom: 30px;
-        }
-    }
-    
+
     .btn-border-green{
         margin: 54px 32px 32px 0;
     }
     
     
-    .table{
+    .employee-data{
         margin: 0;
         width: 1071px;
         border: 1px solid @gray-light;
@@ -1014,9 +1016,22 @@ body {
                     border: none;
                     padding-top: 12px;
                     padding-bottom: 13px;
+                    position: relative;
                     &:first-child{
                         padding-left: 21px;
-                    }                    
+                    }  
+                    .added{
+                        position: absolute;
+                        left: -37px;
+                        top: 20px;
+                        background: @green-lemon;
+                        transform: rotateZ(-90deg);
+                        padding: 1px 9px 2px 9px;
+                        text-transform: uppercase;
+                        color: @white;
+                        font-size: 11px;
+                        .semibold;
+                    }
                 }
                 .disable{
                     color: @gray;
@@ -1148,3 +1163,51 @@ body {
     opacity: 0.7;
 }  
 
+.edit-add-employee{
+    width: 688px;    
+    
+    .modal-header{
+        h4{
+            margin: 14px 0 13px 2px;            
+        }
+        img{
+            content: url(../img/close_default.png);
+            margin-top: 11px;
+            cursor: pointer;
+            &:hover{
+                content: url(../img/close_onhover.png);
+            }
+        }
+    }
+    
+    .modal-body{
+        height: inherit !important;
+        .form-group{
+            margin: 16px 2px 0 2px;
+            
+            label{
+                margin: 0 0 10px 0;
+            }
+            input, select{
+                height: 40px;
+                padding-left: 15px; 
+                margin-bottom: 24px;
+            }
+            textarea{
+                height: 106px;
+                margin-bottom: 14px;
+                &:active, &:focus, &.filled {
+                    background: url(../img/img-icon-close-input.png) no-repeat 97% 14px;
+                    border-color: @blue;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+    
+    .modal-footer{
+        button{
+            margin: 3px 0 7px 16px;
+        }
+    }
+}
