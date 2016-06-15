@@ -1023,10 +1023,10 @@ body {
                     .added{
                         position: absolute;
                         left: -37px;
-                        top: 20px;
+                        top: 19px;
                         background: @green-lemon;
                         transform: rotateZ(-90deg);
-                        padding: 1px 9px 2px 9px;
+                        padding: 1px 8px 2px 8px;
                         text-transform: uppercase;
                         color: @white;
                         font-size: 11px;
@@ -1049,7 +1049,7 @@ body {
                 cursor: pointer;
                 width: 24px;
                 margin: 16px 3px 15px 0;
-                padding: 5px;
+                padding: 2px 5px;
                 float: left;
                 
                 &:first-child{
@@ -1074,7 +1074,7 @@ body {
                         content: url(../img/Exclude_default.png);    
                     }
                 }
-                &:last-child{
+                &:last-child{                    
                     &:hover{
                         &:before{
                             content: url(../img/Comment_onhover.png);
@@ -1175,9 +1175,7 @@ body {
     opacity: 0.7;
 }  
 
-.edit-add-employee{
-    width: 688px;    
-    
+.employee-list-modal{
     .modal-header{
         h4{
             margin: 14px 0 13px 2px;            
@@ -1199,12 +1197,13 @@ body {
             
             label{
                 margin: 0 0 10px 0;
+                .semibold;
             }
             input, select{
                 height: 40px;
                 padding-left: 15px; 
                 margin-bottom: 24px;
-                padding-right: 24px;
+                padding-right: 15px;
             }
             textarea{
                 height: 106px;
@@ -1225,14 +1224,41 @@ body {
     }
 }
 
+.edit-add-employee{
+    width: 688px;    
+}
+
+.exclude-employee{
+    width: 466px;
+    
+    .modal-body{
+        .form-group{
+            margin-top: 10px;
+            label{
+                display: block;
+            }
+            .employee-data{
+                margin-bottom: 26px;
+                display: block;
+            }
+        }
+        .radio-options{
+            .control-label{
+                margin-bottom: 21px;                
+            }
+            label{
+                display: inline-block;
+                margin-bottom: 0 !important;
+            }
+            .text-radio{
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
 
 
 /********************       Radio Butons        ******************/
-
-
-div {
-  margin:0 0 0.75em 0;
-}
 
 input[type="radio"] {
     display:none;
@@ -1251,16 +1277,14 @@ input[type="radio"] + label span {
     cursor:pointer;
     -moz-border-radius:  50%;
     border-radius:  50%;
-}
-
-input[type="radio"] + label span {
-    border: 1px solid @gray-background;
+    border: 2px solid @gray-background;    
     
     &:hover{
         background-color: @gray-light;
         border-color: @blue;
     }
 }
+
 
 input[type="radio"]:checked + label span{
     border: 4px solid @blue;

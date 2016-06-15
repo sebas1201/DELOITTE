@@ -1155,10 +1155,10 @@ body .wrapper .container .row .col-lg-12.noPadding input {
 .employee-list .employee-data tbody tr td .added {
   position: absolute;
   left: -37px;
-  top: 20px;
+  top: 19px;
   background: #86bc25;
   transform: rotateZ(-90deg);
-  padding: 1px 9px 2px 9px;
+  padding: 1px 8px 2px 8px;
   text-transform: uppercase;
   color: #ffffff;
   font-size: 11px;
@@ -1179,7 +1179,7 @@ body .wrapper .container .row .col-lg-12.noPadding input {
   cursor: pointer;
   width: 24px;
   margin: 16px 3px 15px 0;
-  padding: 5px;
+  padding: 2px 5px;
   float: left;
 }
 .employee-list .employee-data .action i:first-child:hover:before {
@@ -1272,54 +1272,77 @@ body .wrapper .container .row .col-lg-12.noPadding input {
   background: #000000;
   opacity: 0.7;
 }
-.edit-add-employee {
-  width: 688px;
-}
-.edit-add-employee .modal-header h4 {
+.employee-list-modal .modal-header h4 {
   margin: 14px 0 13px 2px;
 }
-.edit-add-employee .modal-header img {
+.employee-list-modal .modal-header img {
   content: url(../img/close_default.png);
   margin-top: 11px;
   cursor: pointer;
 }
-.edit-add-employee .modal-header img:hover {
+.employee-list-modal .modal-header img:hover {
   content: url(../img/close_onhover.png);
 }
-.edit-add-employee .modal-body {
+.employee-list-modal .modal-body {
   height: inherit !important;
 }
-.edit-add-employee .modal-body .form-group {
+.employee-list-modal .modal-body .form-group {
   margin: 16px 2px 0 2px;
 }
-.edit-add-employee .modal-body .form-group label {
+.employee-list-modal .modal-body .form-group label {
   margin: 0 0 10px 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
-.edit-add-employee .modal-body .form-group input,
-.edit-add-employee .modal-body .form-group select {
+.employee-list-modal .modal-body .form-group input,
+.employee-list-modal .modal-body .form-group select {
   height: 40px;
   padding-left: 15px;
   margin-bottom: 24px;
-  padding-right: 24px;
+  padding-right: 15px;
 }
-.edit-add-employee .modal-body .form-group textarea {
+.employee-list-modal .modal-body .form-group textarea {
   height: 106px;
   margin-bottom: 14px;
 }
-.edit-add-employee .modal-body .form-group textarea:active,
-.edit-add-employee .modal-body .form-group textarea:focus,
-.edit-add-employee .modal-body .form-group textarea.filled {
+.employee-list-modal .modal-body .form-group textarea:active,
+.employee-list-modal .modal-body .form-group textarea:focus,
+.employee-list-modal .modal-body .form-group textarea.filled {
   background: url(../img/img-icon-close-input.png) no-repeat 97% 14px;
   border-color: #00a3e0;
   box-shadow: none;
 }
-.edit-add-employee .modal-footer button {
+.employee-list-modal .modal-footer button {
   margin: 3px 0 7px 16px;
 }
-/********************       Radio Butons        ******************/
-div {
-  margin: 0 0 0.75em 0;
+.edit-add-employee {
+  width: 688px;
 }
+.exclude-employee {
+  width: 466px;
+}
+.exclude-employee .modal-body .form-group {
+  margin-top: 10px;
+}
+.exclude-employee .modal-body .form-group label {
+  display: block;
+}
+.exclude-employee .modal-body .form-group .employee-data {
+  margin-bottom: 26px;
+  display: block;
+}
+.exclude-employee .modal-body .radio-options .control-label {
+  margin-bottom: 21px;
+}
+.exclude-employee .modal-body .radio-options label {
+  display: inline-block;
+  margin-bottom: 0 !important;
+}
+.exclude-employee .modal-body .radio-options .text-radio {
+  margin-bottom: 16px;
+}
+/********************       Radio Butons        ******************/
 input[type="radio"] {
   display: none;
 }
@@ -1337,9 +1360,7 @@ input[type="radio"] + label span {
   cursor: pointer;
   -moz-border-radius: 50%;
   border-radius: 50%;
-}
-input[type="radio"] + label span {
-  border: 1px solid #c8c8c8;
+  border: 2px solid #c8c8c8;
 }
 input[type="radio"] + label span:hover {
   background-color: #e7e7e6;
