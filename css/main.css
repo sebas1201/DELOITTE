@@ -1175,32 +1175,29 @@ body .wrapper .container .row .col-lg-12.noPadding input {
   width: 120px;
   padding-left: 14px;
 }
-.employee-list .employee-data .action img {
+.employee-list .employee-data .action i {
   cursor: pointer;
   width: 24px;
   margin: 16px 3px 15px 0;
   padding: 5px;
+  float: left;
 }
-.employee-list .employee-data .action img:first-child {
-  content: url(../img/Edit_default.png);
-}
-.employee-list .employee-data .action img:first-child:hover,
-.employee-list .employee-data .action img:first-child.active {
+.employee-list .employee-data .action i:first-child:hover:before {
   content: url(../img/Edit_onhover.png);
 }
-.employee-list .employee-data .action img:nth-child(2) {
-  content: url(../img/Exclude_default.png);
+.employee-list .employee-data .action i:first-child:before {
+  content: url(../img/Edit_default.png);
 }
-.employee-list .employee-data .action img:nth-child(2):hover,
-.employee-list .employee-data .action img:nth-child(2).active {
+.employee-list .employee-data .action i:nth-child(2):hover:before {
   content: url(../img/Exclude_onhover.png);
 }
-.employee-list .employee-data .action img:last-child {
-  margin-right: 18px;
-  content: url(../img/Comment.png);
+.employee-list .employee-data .action i:nth-child(2):before {
+  content: url(../img/Exclude_default.png);
 }
-.employee-list .employee-data .action img:last-child:hover,
-.employee-list .employee-data .action img:last-child.active {
+.employee-list .employee-data .action i:last-child:hover:before {
+  content: url(../img/Comment_onhover.png);
+}
+.employee-list .employee-data .action i:last-child:before {
   content: url(../img/Comment_onhover.png);
 }
 .employee-list .btn {
@@ -1303,6 +1300,7 @@ body .wrapper .container .row .col-lg-12.noPadding input {
   height: 40px;
   padding-left: 15px;
   margin-bottom: 24px;
+  padding-right: 24px;
 }
 .edit-add-employee .modal-body .form-group textarea {
   height: 106px;
@@ -1317,6 +1315,45 @@ body .wrapper .container .row .col-lg-12.noPadding input {
 }
 .edit-add-employee .modal-footer button {
   margin: 3px 0 7px 16px;
+}
+/********************       Radio Butons        ******************/
+div {
+  margin: 0 0 0.75em 0;
+}
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"] + label {
+  color: $DarkBrown;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+input[type="radio"] + label span {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+input[type="radio"] + label span {
+  border: 1px solid #c8c8c8;
+}
+input[type="radio"] + label span:hover {
+  background-color: #e7e7e6;
+  border-color: #00a3e0;
+}
+input[type="radio"]:checked + label span {
+  border: 4px solid #00a3e0;
+}
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+  -webkit-transition: background-color 0.4s linear;
+  -o-transition: background-color 0.4s linear;
+  -moz-transition: background-color 0.4s linear;
+  transition: background-color 0.4s linear;
 }
 .semibold {
   font-family: 'Open Sans', sans-serif;
