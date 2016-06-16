@@ -1272,15 +1272,18 @@ body .wrapper .container .row .col-lg-12.noPadding input {
   background: #000000;
   opacity: 0.7;
 }
+/********************            Modals            ********************/
 .employee-list-modal .modal-header h4 {
   margin: 14px 0 13px 2px;
 }
-.employee-list-modal .modal-header img {
-  content: url(../img/close_default.png);
+.employee-list-modal .modal-header i {
   margin-top: 11px;
   cursor: pointer;
 }
-.employee-list-modal .modal-header img:hover {
+.employee-list-modal .modal-header i:before {
+  content: url(../img/close_default.png);
+}
+.employee-list-modal .modal-header i:hover:before {
   content: url(../img/close_onhover.png);
 }
 .employee-list-modal .modal-body {
@@ -1315,6 +1318,25 @@ body .wrapper .container .row .col-lg-12.noPadding input {
 }
 .employee-list-modal .modal-footer button {
   margin: 3px 0 7px 16px;
+}
+.confirmation-modal {
+  width: 338px;
+}
+.confirmation-modal .conten-body {
+  margin: 80px 0 !important;
+}
+.confirmation-modal .conten-body h4 {
+  margin: 0 !important;
+}
+.confirmation-modal .conten-body img {
+  margin-bottom: 29px;
+  height: 104px !important;
+}
+.confirmation-modal .modal-footer {
+  text-align: center;
+}
+.confirmation-modal .modal-footer button {
+  margin: 0 !important;
 }
 .edit-add-employee {
   width: 688px;

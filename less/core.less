@@ -1175,17 +1175,24 @@ body {
     opacity: 0.7;
 }  
 
+/********************            Modals            ********************/
+
+
 .employee-list-modal{
     .modal-header{
         h4{
             margin: 14px 0 13px 2px;            
         }
-        img{
-            content: url(../img/close_default.png);
+        i{
+            &:before{
+                content: url(../img/close_default.png);
+            }            
             margin-top: 11px;
             cursor: pointer;
             &:hover{
-                content: url(../img/close_onhover.png);
+                &:before{
+                    content: url(../img/close_onhover.png);
+                }                
             }
         }
     }
@@ -1217,10 +1224,32 @@ body {
         }
     }
     
-    .modal-footer{
+    .modal-footer{        
         button{
             margin: 3px 0 7px 16px;
         }
+    }
+}
+
+.confirmation-modal{
+    width: 338px;
+    .conten-body{
+        margin: 80px 0 !important;
+        
+        h4{
+            margin: 0 !important;
+        }
+        img{
+            margin-bottom: 29px;  
+            height: 104px !important;
+        }
+    }
+    
+     .modal-footer{
+         text-align: center;
+         button{
+             margin: 0 !important;
+         }
     }
 }
 
