@@ -1303,3 +1303,161 @@ input[type="radio"]:checked + label span {
   -moz-transition:background-color 0.4s linear;
   transition:background-color 0.4s linear;
 }
+
+/********************       Progress Circle        ******************/
+
+.radial-bar { 
+  margin: 0;
+  width: 80px;
+  height: 80px;
+  background-color: #cccccc;
+  border-radius: 50%;
+}
+
+.radial-bar__mask {
+  clip: rect(0px, 80px, 80px, 40px);
+  -webkit-backface-visibility: hidden;
+  transition: -webkit-transform 1s;
+  transition: -ms-transform 1s;
+  transition: transform 1s;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.radial-bar__fill {
+  -webkit-backface-visibility: hidden;
+  transition: -webkit-transform 1s;
+  transition: -ms-transform 1s;
+  transition: transform 1s;
+  border-radius: 50%;
+  clip: rect(0px, 40px, 80px, 0px);
+  background-color: @blue;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+}
+
+.radial-bar__inset {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  margin-left: 5px;
+  margin-top: 5px;
+  background-color: #fbfbfb;
+  border-radius: 50%;
+  display: table-cell;
+}
+
+.radial-bar__percent {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  color: @blue;
+  font-size: 22px;
+}
+/********************      End Progress Circle        ******************/
+
+.btn-switch{
+    .btn{
+        &:first-child{
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+        }
+        &:last-child{
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+            margin-left: -5px;
+        }
+        &:active, &:focus{
+            background: @blue !important;
+            color: @white !important;
+        }
+    }
+}
+
+
+.activity-analysis{
+    
+    .panel-left{
+        width: 190px;
+        
+        .logo-company{
+            margin: 37px auto 27px;
+        }
+    }
+    
+    .panel-right{
+        width: 940px;
+        
+        .head-panel-right{
+            margin-top: 35px;
+            padding-bottom: 26px;
+            margin-bottom: 26px;
+            border-bottom: 1px solid  @gray-light;
+            
+            p{
+                margin: 0;
+                span{
+                    .semibold;
+                }
+            }
+        }
+         
+        .nav-tabs{
+            li{
+                a{
+                    border-radius: 0;
+                    padding: 7px 25px;
+                    .semibold;
+                    color: @black;                     
+
+                    
+                    span{
+                        margin-left: 10px;
+                        color: @gray-show-more;
+                    }
+                }
+                
+                &:focus, &.active{
+                    a{
+                        border-top: 2px solid @green-lemon;
+                        color: @black;
+                    }
+                }
+            }
+        }
+        
+        table{
+            margin-top: 20px;
+            thead{
+                background: @gray-ultra-light;
+                th{
+                    border: 0;                    
+                }
+            }
+            tbody{
+                td{
+                    padding-top: 13px;
+                    padding-bottom: 12px;
+                    &:last-child{                        
+                        border-left: 1px solid @gray-light;
+                    }
+                }
+            }
+        }
+    }   
+        
+        .buttons-header{
+            margin-bottom: 26px;
+            .btn-border-green{
+                margin-right: 10px;
+            }
+            .btn-green{
+                padding: 10px 20px;
+            }
+        }
+    }
+}
