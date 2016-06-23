@@ -74,8 +74,6 @@
                                 </div>
                               </div>
                             </div>
-                            <!--------------------------------------------->
-                            
                         </div>
                     </div>
                 </div>
@@ -83,11 +81,8 @@
         </div>
         
         <div class="wrapper">
-            <div class="container content">               
-                
+            <div class="container content">                               
                 <div class="row activity-analysis">
-
-
                     <div class="clearfix flexBox">
                         <div class="panel-left noPadding">
                         <div class="logo-company "><img src="img/img-logo-hp.png" alt="" title=""></div>
@@ -100,23 +95,24 @@
                               <li><a  data-toggle="tab">ADMINISTRATION</a></li>
                           </ul>
                         </div>
-
                         <div class="panel-right">
                             <!-- Tab panes -->
-                            <div class="tab-content">
-                                
+                            <div class="tab-content">                                
                                 <div class="clearfix head-panel-right">
                                     <div class="col-md-8 noPadding">
                                         <p>The <span>Financial Department Survey</span> is currently open for responses</p>
                                     </div>
                                     <div class="col-md-4 text-right noPadding">                                        
-                                        <label>Global Survey Status</label>
-                                        <input type="checkbox" class="js-switch" checked />                                            
+                                    <label>Global Survey Status</label>
+
+                                        <label class="switch">
+                                          <input type="checkbox" class="switch-input">
+                                          <span class="switch-label" data-on="Open" data-off="Closed"></span>
+                                          <span class="switch-handle"></span>
+                                        </label>                                                                                
                                     </div>
-                                </div>
-                                
-                                <div class="clearfix buttons-header">
-                                    
+                                </div>                                
+                                <div class="clearfix buttons-header">                                    
                                     <div class="col-md-5 btn-switch noPadding">
                                         <button class="btn btn-border-blue narrow">Modified Employees</button>
                                         <button class="btn btn-border-blue narrow">Survey Responses</button>
@@ -134,32 +130,28 @@
                                         <button class="btn medium btn-green">                        
                                             Export to Excel                    
                                         </button>
-                                    </div>
-                                    
-                                </div>
-                                    
-                                <div class="clearfix">
-                                    
+                                    </div>                                    
+                                </div>                                    
+                                <div class="clearfix">                                    
                                     <ul class="nav nav-tabs">
-                                        <li class="active"><a data-toggle="tab" href="#home">Submitted <span>25</span></a></li>
-                                        <li><a data-toggle="tab" href="#menu1">Not Submitted<span>8</span></a></li>                                     
+                                        <li class="active"><a data-toggle="tab" href="#submitted">Submitted <span>25</span></a></li>
+                                        <li><a data-toggle="tab" href="#not-submitted">Not Submitted<span>8</span></a></li>                                     
                                     </ul>
-
                                       <div class="tab-content">
-                                        <div id="home" class="tab-pane fade in active">                                           
-                                            <table class="table employee-data">
+                                        <div id="submitted" class="tab-pane fade in active">                                           
+                                            <table class="table table-submitted">
                                                 <thead>
                                                     <tr>
-                                                        <th>Date Submitted</th>
-                                                        <th>Respondent Name</th>
-                                                        <th>Respondent Email Address</th>
-                                                        <th>Employye´s Assigned</th>
-                                                        <th>Employee´s Completed</th>
-                                                        <th>Employee´s Completed</th>                                                        
+                                                        <th><span>Date Submitted<i></i></span></th>
+                                                        <th><span>Respondent Name<i></i></span></th>
+                                                        <th><span>Respondent Email Address<i></i></span></th>
+                                                        <th><span>Employye´s Assigned<i></i></span></th>
+                                                        <th><span>Employee´s Completed<i></i></span></th>
+                                                        <th><span>Employee´s Completed<i></i></span></th>                                                        
                                                         <th>Action</th>                                
                                                     </tr>
                                                 </thead>
-                                                <tbody>
+                                                 <tbody>
                                                     <tr>
                                                         <td>10/30/2015</td>
                                                         <td>Gardner, Shane</td>
@@ -210,19 +202,59 @@
                                                     </tr>                                                     
                                                 </tbody>
                                             </table>
-                                        </div>
-                                          
-                                        <div id="menu1" class="tab-pane fade">
-                                                                                    
+                                        </div>                                          
+                                        <div id="not-submitted" class="tab-pane fade">
+                                             <table class="table table-not-submitted">
+                                                <thead>
+                                                    <tr>
+                                                        <th><span>Respondent Name<i></i></span></th>
+                                                        <th><span>Respondent Email Address<i></i></span></th>
+                                                        <th><span>Employee´s Assigned<i></i></span></th>                                                        
+                                                        <th>Action</th>                                
+                                                    </tr>
+                                                </thead>
+                                                 <tbody>
+                                                    <tr>                                                        
+                                                        <td>10</td>
+                                                        <td>10</td>
+                                                        <td>5</td>                                                        
+                                                        <td class="action text-right">                                                                                                                        
+                                                            <i></i>
+                                                        </td>                                
+                                                    </tr> 
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>10</td>
+                                                        <td>5</td>                                                        
+                                                        <td class="action text-right">
+                                                            <i></i>                                                            
+                                                        </td>                                
+                                                    </tr> 
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>10</td>
+                                                        <td>5</td>                                    
+                                                        <td class="action text-right">
+                                                            <i></i>
+                                                        </td>                                
+                                                    </tr> 
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>10</td>
+                                                        <td>5</td>                                                        
+                                                        <td class="action text-right">                                                            
+                                                            <i></i>
+                                                        </td>                                
+                                                    </tr>                                                     
+                                                </tbody>                                               
+                                            </table>                                       
                                         </div>
                                       </div>
-                                </div>
-                                
-                            </div>
-                            
+                                </div>                                
+                            </div>                            
                             <div class="col-md-6 noPadding">
                                 <ul class="pagination">
-                                    <li><a> < </a></li>
+                                    <li><a>  </a></li>
                                     <li><a class="active">1</a></li>
                                     <li><a>2</a></li>
                                     <li><a>3</a></li>
@@ -235,12 +267,7 @@
                         </div>
 
                     </div>
-                    
-
-
-
-                </div>
-                
+                </div>                
             </div>
         </div>
 
